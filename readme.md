@@ -1,10 +1,10 @@
 # Debian Sway
 
-Este projeto visa configurar o Debian 13 Trixie + SwayWM para meu Thinkpad T14 GEN 2 (AMD)
+Este projeto visa configurar o Debian 13 Trixie para meu Thinkpad T14 GEN 2 (AMD)
 
 ## Configuração inicial:
 
-- Instale o Debian em sua versão CLI, sem interface gráfica (Ou na versão gnome caso queira mais praticidade)
+- Instale o Debian em sua versão XFCE para usar com o I3 ou em sua versão Gnome caso deseje utilizar com o Sway
   - Lembre-se de não definir uma senha para o usuário root, pois assim nosso usuário será adicionado ao grupo root
   
 - Para configurar o teclado para o layout ABNT2, acesse ```/etc/default/keyboard``` e deixe o arquivo da seguinte forma:
@@ -14,7 +14,7 @@ Este projeto visa configurar o Debian 13 Trixie + SwayWM para meu Thinkpad T14 G
   XKBVARIANT="abnt2"
   XKBOPTIONS=""
   ```
-  
+
 - Agora, acesse ```/etc/apt/sources.list``` e comente a linha iniciada em ```deb cdrom...```
 
 - Atualize o sistema:
@@ -24,34 +24,53 @@ Este projeto visa configurar o Debian 13 Trixie + SwayWM para meu Thinkpad T14 G
 
 - Reinicie o sistema
 
-## Setup ambiente gráfico:
+## Setup 1 - I3 + XFCE:
+
+- Instale as dependências do Sway
+  ```bash
+  sudo apt install --no-install-recommends i3
+  sudo apt install rofi bluez blueman lightdm-gtk-greeter-settings
+  ```
+
+- Abra ```Session and Startup```
+
+- Selecione a Aba ```Application Autostart``` e adicione
+  ```bash
+  Name: i3
+  Description: Window Manager
+  Command: i3
+  Trigger: On login
+  
+  Name: xfsettingsd
+  Description: Xfwm Theme Workaround
+  Command: xfsettingsd --replace
+  Trigger: On login
+  ```
+  
+- Agora navegue até a aba ```Current Session``` e modifique s serviços a seguir:
+  ```
+  Program: xfdesktop
+  Restart Style: Never
+  
+  Program: xfwm4
+  Restart Style: Never
+  ```
+  
+- Abra ```Keyboard``` e delete todos os shortcuts
+
+## Setup 2 - Sway + Gnome
 
 - Instale as dependências do Sway
   ```bash
   sudo apt install sway swaybg swaylock swayidle \
   waybar wlogout libwayland-dev wofi mako-notifier \
-  brightnessctl pavucontrol blueman xdg-desktop-portal-wlr mate-polkit \
+  brightnessctl pavucontrol bluez blueman xdg-desktop-portal-wlr mate-polkit \
   network-manager network-manager-gnome \
-  htop fastfetch fonts-font-awesome kitty git
+  htop fastfetch nautilus fonts-font-awesome kitty git
   ```
   
-- Habilite o suporte à Flatpaks
-  ```bash
-  sudo apt install flatpak
-  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  ```
-
-- Vamos configurar o tlp para fazer o gerenciamento de energia
-  ```bash
-  sudo apt install tlp tlp-rdw acpi-call-dkms
-  sudo systemctl enable tlp && sudo systemctl start tlp
-  flatpak install flathub com.github.d4nj1.tlpui
-  ```
-  
-- Vamos adicionar o browser
-  ```bash
-  flatpak install flathub com.brave.Browser
-  ```
+- Clonar arquivos de configuração do repo (https://github.com/Tong-ST/debian_sway) para meu repo pessoal e personalizar com minhas ferramentas/estilos
+  - usar como referencia de estilo esse rice https://www.reddit.com/r/unixporn/comments/vo2fi0/sway_first_rice_im_comfortable_with/
 
 ## Pós-instalação:
 
@@ -87,6 +106,24 @@ Este projeto visa configurar o Debian 13 Trixie + SwayWM para meu Thinkpad T14 G
   ```bash
   sudo apt install ufw gufw
   sudo ufw enable
+  ```
+  
+- Habilite o suporte à Flatpaks
+  ```bash
+  sudo apt install flatpak
+  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  ```
+
+- Vamos configurar o tlp para fazer o gerenciamento de energia
+  ```bash
+  sudo apt install tlp tlp-rdw acpi-call-dkms
+  sudo systemctl enable tlp && sudo systemctl start tlp
+  flatpak install flathub com.github.d4nj1.tlpui
+  ```
+  
+- Vamos adicionar o browser
+  ```bash
+  flatpak install flathub com.brave.Browser
   ```
 
 - Reinicie o sistema
@@ -125,6 +162,8 @@ Este projeto visa configurar o Debian 13 Trixie + SwayWM para meu Thinkpad T14 G
 [Roteiro de pós-instalação do Debian para arte e criação](https://github.com/eddiecsilva/debian-post-install)
 
 [Guia atualização Kernel](https://tuxinit.com/update-kernel-debian/)
+
+[Guia configuração XFCE + I3](https://gist.github.com/fathulfahmy/61910e84b99b38009ad9268811e4aa2a)
 
 [Debian Sway Thinkpad](https://github.com/Tong-ST/debian_sway)
 
