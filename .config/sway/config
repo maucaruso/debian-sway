@@ -34,7 +34,7 @@ exec /usr/libexec/polkit-mate-authentication-agent-1
 
 ### Output configuration
 # using "swaybg" just put file path as below and end with 'fill'
-output * background ~/.config/sway/wallpapers/Untitled.jpeg fill
+output * background ~/.config/sway/wallpapers/1.png fill
 #
 # Example configuration:
 #
@@ -82,10 +82,10 @@ default_floating_border pixel 2
 #
 # Aesthetic layout
 #
-output * {
+#output * {
   # scale 1.25
-  bg ~/.config/wallpaper.png fill
-}
+#  bg ~/.config/wallpaper/1.png fill
+#}
 
 smart_borders on
 gaps inner 6
