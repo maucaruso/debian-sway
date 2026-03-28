@@ -1,38 +1,17 @@
-:root {
-  --gb-bg0: #282828;
-  --gb-bg2: #504945;
-  --gb-bg3: #665c54;
-  --gb-fg0: #fbf1c7;
-  --gb-fg1: #ebdbb2;
-  --gb-fg3: #bdae93;
-  --gb-red: #cc241d;
-  --gb-red-bright: #fb4934;
-  --gb-green: #98971a;
-  --gb-green-bright: #b8bb26;
-  --gb-yellow: #d79921;
-  --gb-yellow-bright: #fabd2f;
-  --gb-blue: #458588;
-  --gb-blue-bright: #83a598;
-  --gb-purple: #b16286;
-  --gb-purple-bright: #d3869b;
-  --gb-aqua: #689d6a;
-  --gb-aqua-bright: #8ec07c;
-}
-
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 14px;
   font-weight: 600;
-  color: var(--gb-fg1);
+  color: #ebdbb2;
   border: none;
   border-radius: 0;
 }
 
 window#waybar {
-  background-color: var(--gb-bg0);
-  color: var(--gb-fg1);
+  background-color: #282828;
+  color: #ebdbb2;
   transition: background-color 0.25s ease;
-  border-bottom: 1px solid var(--gb-bg3);
+  border-bottom: 1px solid #665c54;
 }
 
 window#waybar.hidden {
@@ -51,7 +30,7 @@ widget > * {
   margin-right: 4px;
   padding: 0 12px;
   min-height: 28px;
-  border: 2px solid var(--gb-bg3);
+  border: 2px solid #665c54;
   border-radius: 0;
 }
 
@@ -73,95 +52,95 @@ widget > * {
   margin: 0 4px 0 0;
   padding: 0 10px;
   min-height: 28px;
-  color: var(--gb-fg1);
-  background: var(--gb-bg0);
-  border: 2px solid var(--gb-bg3);
+  color: #ebdbb2;
+  background: #282828;
+  border: 2px solid #665c54;
   border-radius: 0;
 }
 
 #workspaces button.focused {
-  background: var(--gb-yellow);
-  color: var(--gb-bg0);
-  border-color: var(--gb-yellow-bright);
+  background: #d79921;
+  color: #282828;
+  border-color: #fabd2f;
 }
 
 #workspaces button.urgent {
-  background: var(--gb-red);
-  color: var(--gb-fg0);
-  border-color: var(--gb-red-bright);
+  background: #cc241d;
+  color: #fbf1c7;
+  border-color: #fb4934;
 }
 
 #window {
-  background: var(--gb-bg2);
-  color: var(--gb-fg1);
-  border-color: var(--gb-bg3);
+  background: #504945;
+  color: #ebdbb2;
+  border-color: #665c54;
 }
 
 #mode {
-  background: var(--gb-red);
-  color: var(--gb-fg0);
-  border-color: var(--gb-red-bright);
+  background: #cc241d;
+  color: #fbf1c7;
+  border-color: #fb4934;
 }
 
 #cpu {
-  background: var(--gb-blue);
-  color: var(--gb-fg0);
-  border-color: var(--gb-blue-bright);
+  background: #458588;
+  color: #fbf1c7;
+  border-color: #83a598;
 }
 
 #memory {
-  background: var(--gb-purple);
-  color: var(--gb-fg0);
-  border-color: var(--gb-purple-bright);
+  background: #b16286;
+  color: #fbf1c7;
+  border-color: #d3869b;
 }
 
 #pulseaudio {
-  background: var(--gb-aqua);
-  color: var(--gb-bg0);
-  border-color: var(--gb-aqua-bright);
+  background: #689d6a;
+  color: #282828;
+  border-color: #8ec07c;
 }
 
 #network {
-  background: var(--gb-green);
-  color: var(--gb-bg0);
-  border-color: var(--gb-green-bright);
+  background: #98971a;
+  color: #282828;
+  border-color: #b8bb26;
 }
 
 #bluetooth {
-  background: var(--gb-blue);
-  color: var(--gb-fg0);
-  border-color: var(--gb-blue-bright);
+  background: #458588;
+  color: #fbf1c7;
+  border-color: #83a598;
 }
 
 #clock {
-  background: var(--gb-yellow);
-  color: var(--gb-bg0);
-  border-color: var(--gb-yellow-bright);
+  background: #d79921;
+  color: #282828;
+  border-color: #fabd2f;
 }
 
 #battery {
-  background: var(--gb-purple);
-  color: var(--gb-fg0);
-  border-color: var(--gb-purple-bright);
+  background: #b16286;
+  color: #fbf1c7;
+  border-color: #d3869b;
 }
 
 #battery.charging {
-  background: var(--gb-green);
-  color: var(--gb-bg0);
-  border-color: var(--gb-green-bright);
+  background: #98971a;
+  color: #282828;
+  border-color: #b8bb26;
 }
 
 #battery.critical {
-  background: var(--gb-red);
-  color: var(--gb-fg0);
-  border-color: var(--gb-red-bright);
+  background: #cc241d;
+  color: #fbf1c7;
+  border-color: #fb4934;
   animation: blink 1s linear infinite alternate;
 }
 
 #custom-logout {
-  background: var(--gb-red);
-  color: var(--gb-fg0);
-  border-color: var(--gb-red-bright);
+  background: #cc241d;
+  color: #fbf1c7;
+  border-color: #fb4934;
 }
 
 @keyframes blink {
@@ -171,15 +150,15 @@ widget > * {
 }
 
 label:focus {
-  background-color: var(--gb-bg0);
+  background-color: #282828;
 }
 
 tooltip {
-  background: var(--gb-bg2);
-  border: 2px solid var(--gb-bg3);
+  background: #504945;
+  border: 2px solid #665c54;
   border-radius: 0;
 }
 
 tooltip label {
-  color: var(--gb-fg3);
+  color: #bdae93;
 }
