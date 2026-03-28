@@ -60,13 +60,35 @@ Este projeto visa configurar o Debian 13 Trixie para meu Thinkpad T14 GEN 2 (AMD
 
 ## Setup 2 - Sway + Gnome
 
+Por estarmos configurando o Sway em cima de uma instalação Gnome, muitos utilitários e ferramentas já vem pré-instalados e configurados, um exemplo é o bluez (para bluetooth), também vamos aproveitar o utilitário de login do próprio gnome para iniciar a sessão sway, logo, só teremos que instalar alguns pacotes adicionais para que tudo funcione corretamente no Sway.
+
+Vale ressaltar também que nesse setup, a idéia é utilizar muitas ferramentas do próprio gnome como o nautilus como file manager, o editor de texto padrão e etc, isso simplifica bastante a configuração do ambiente.
+
+Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja muito legal no Sway, você pode a qualquer momento alternar para o ambiente Gnome.
+
 - Instale as dependências do Sway
   ```bash
   sudo apt install sway swaybg swaylock swayidle \
   waybar wlogout libwayland-dev wofi mako-notifier \
-  brightnessctl pavucontrol bluez blueman xdg-desktop-portal-wlr mate-polkit \
-  network-manager network-manager-gnome \
-  htop fastfetch nautilus fonts-font-awesome kitty git
+  brightnessctl pavucontrol blueman xdg-desktop-portal-wlr mate-polkit network-manager-gnome \
+  fonts-font-awesome kitty git
+  ```
+  
+- Clone este repositório e mova os arquivos de configuração:
+  ```bash
+  cp -r debian-sway/.config/sway/ ~/.config/
+  cp -r debian-sway/.config/waybar/ ~/.config/
+  cp -r debian-sway/.config/wofi/ ~/.config/
+  cp -r debian-sway/.config/kitty ~/.config/
+  ```
+  
+- Instale as fontes utilizadas pelo projeto:
+  ```bash
+  wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
+  cd ~/.local/share/fonts
+  unzip JetBrainsMono.zip
+  rm JetBrainsMono.zip
+  fc-cache -fv
   ```
   
 - Clonar arquivos de configuração do repo (https://github.com/Tong-ST/debian_sway) para meu repo pessoal e personalizar com minhas ferramentas/estilos
@@ -125,6 +147,11 @@ Este projeto visa configurar o Debian 13 Trixie para meu Thinkpad T14 GEN 2 (AMD
   ```bash
   flatpak install flathub com.brave.Browser
   ```
+  
+- Instale alguns programas úteis (opcionais)
+  ```bash
+  sudo apt install htop fastfetch
+  ```
 
 - Reinicie o sistema
 
@@ -166,5 +193,7 @@ Este projeto visa configurar o Debian 13 Trixie para meu Thinkpad T14 GEN 2 (AMD
 [Guia configuração XFCE + I3](https://gist.github.com/fathulfahmy/61910e84b99b38009ad9268811e4aa2a)
 
 [Debian Sway Thinkpad](https://github.com/Tong-ST/debian_sway)
+
+[Sway Rice](https://github.com/ziap/dotfiles)
 
 [Fix Flameshot Issues](https://bbs.archlinux.org/viewtopic.php?id=284847)
