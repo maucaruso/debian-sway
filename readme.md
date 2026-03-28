@@ -66,12 +66,12 @@ Vale ressaltar também que nesse setup, a idéia é utilizar muitas ferramentas 
 
 Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja muito legal no Sway, você pode a qualquer momento alternar para o ambiente Gnome.
 
-- Instale as dependências do Sway
+- Instale as dependências necessárias
   ```bash
   sudo apt install sway swaybg swaylock swayidle \
   waybar wlogout libwayland-dev wofi mako-notifier \
-  brightnessctl pavucontrol blueman xdg-desktop-portal-wlr mate-polkit network-manager-gnome \
-  fonts-font-awesome kitty git
+  brightnessctl pavucontrol blueman xdg-desktop-portal-wlr mate-polkit \
+  network-manager-gnome fonts-font-awesome kitty git
   ```
   
 - Clone este repositório e mova os arquivos de configuração:
@@ -91,8 +91,9 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   fc-cache -fv
   ```
   
-- Clonar arquivos de configuração do repo (https://github.com/Tong-ST/debian_sway) para meu repo pessoal e personalizar com minhas ferramentas/estilos
-  - usar como referencia de estilo esse rice https://www.reddit.com/r/unixporn/comments/vo2fi0/sway_first_rice_im_comfortable_with/
+- Ainda na sessão Gnome, altere o tema para Dark Mode para que nossas aplicações Gnome fiquem escuras ao alternarmos para o Sway
+
+- Faça Logout e na tela de login, seleciona a sessão Sway
 
 ## Pós-instalação:
 

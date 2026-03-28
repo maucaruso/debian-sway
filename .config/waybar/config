@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/window", "sway/mode"], 
   "modules-center": ["cpu", "memory"],
-  "modules-right": ["pulseaudio", "network", "bluetooth", "clock", "battery", "custom/shutdown" ,"custom/logout"],
+  "modules-right": ["pulseaudio", "network", "bluetooth", "clock", "battery", "custom/logout"],
 
   "clock": {
     "format": " {:%a %d %b %H:%M}",
@@ -14,7 +14,7 @@
   },
   "memory": {
     "format": " {used:0.1f}G/{total:0.1f}G",
-    "on-click": "alacritty -e htop"
+    "on-click": "kitty -e htop"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -61,16 +61,6 @@
     "format": "",
     "tooltip": "Logout",
     "on-click": "wlogout"
-  },
-  "custom/shutdown": {
-    "format": "",
-    "tooltip": "Shutdown",
-    "on-click": "systemctl poweroff"
-  },
-  "custom/menu": {
-    "format": "",
-    "tooltip": "menu",
-    "on-click": "wofi --show drun"
   }
 }
 

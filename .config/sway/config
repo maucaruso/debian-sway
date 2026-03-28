@@ -265,7 +265,8 @@ bindsym $mod+alt+r mode "resize"
     bindsym Print exec grim
     bindsym $mod+Print exec grim -g "$(slurp)"
    
-    input "type:keyboard" {
+    input type:keyboard {
+        xkb_model thinkpad60
         xkb_layout br
         xkb_variant abnt2
     }
