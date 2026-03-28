@@ -26,7 +26,7 @@ Este projeto visa configurar o Debian 13 Trixie para meu Thinkpad T14 GEN 2 (AMD
 
 ## Setup 1 - I3 + XFCE:
 
-- Instale as dependências do Sway
+- Instale as dependências do i3
   ```bash
   sudo apt install --no-install-recommends i3
   sudo apt install rofi bluez blueman lightdm-gtk-greeter-settings
