@@ -151,7 +151,7 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   
 - Instale alguns programas úteis (opcionais)
   ```bash
-  sudo apt install htop fastfetch
+  sudo apt install htop fastfetch wdisplays
   ```
 
 - Reinicie o sistema
