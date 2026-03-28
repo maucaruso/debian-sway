@@ -1,9 +1,9 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["sway/workspaces"], 
+  "modules-left": ["sway/workspaces", "sway/window", "sway/mode"], 
   "modules-center": ["cpu", "memory"],
-  "modules-right": ["pulseaudio", "network", "bluetooth", "clock", "battery", "clock", "custom/shutdown" ,"custom/logout"],
+  "modules-right": ["pulseaudio", "network", "bluetooth", "clock", "battery", "custom/shutdown" ,"custom/logout"],
 
   "clock": {
     "format": " {:%a %d %b %H:%M}",
