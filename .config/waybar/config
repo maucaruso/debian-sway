@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/window", "sway/mode"], 
   "modules-center": ["cpu", "custom/gpu-usage", "memory"],
-  "modules-right": ["pulseaudio", "network", "bluetooth", "clock", "battery", "custom/logout"],
+  "modules-right": ["tray", "pulseaudio", "network", "bluetooth", "clock", "battery", "custom/logout"],
 
   "clock": {
     "format": " {:%a %d %b %H:%M}",
@@ -69,6 +69,10 @@
     "format": "",
     "tooltip": "Logout",
     "on-click": "wlogout"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
   }
 }
 
