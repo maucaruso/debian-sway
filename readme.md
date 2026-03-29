@@ -192,6 +192,8 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   com.google.Chrome \
   org.gnome.DejaDup
   ```
+  
+- Instale também Docker, Node e PHP
 
 ## Preparando sistema para jogos:
 
