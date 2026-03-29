@@ -19,37 +19,38 @@ window#waybar.hidden {
 }
 
 widget > * {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .modules-left > widget > *,
 .modules-center > widget > *,
 .modules-right > widget > * {
-  margin-left: 4px;
-  margin-right: 4px;
-  padding: 0 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0 16px;
   min-height: 28px;
   border: 2px solid #665c54;
   border-radius: 0;
 }
 
 .modules-left > widget:first-child > * {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 .modules-right > widget:last-child > * {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 #workspaces {
   background: transparent;
   border: none;
   padding: 0;
+  margin: 4px 0 4px 2px;
 }
 
 #workspaces button {
-  margin: 0 4px 0 0;
+  margin: 0 2px;
   padding: 0 10px;
   min-height: 28px;
   color: #ebdbb2;

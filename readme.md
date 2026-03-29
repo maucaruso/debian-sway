@@ -173,6 +173,26 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   - Siga o guia de instalaçao [RyzenAdj](https://github.com/FlyGoat/RyzenAdj)
   - Fiz [esse tutorial](https://www.notion.so/Otimizando-Processadores-AMD-1e73aad84342806b90dbfa3d0aed4f74) explicando como utilizar a ferramenta
 
+## Ambiente de trabalho:
+
+- O comando abaixo instala apps úteis para o meu fluxo de trabalho e uso pessoal:
+  ```bash
+  flatpak install flathub \
+  com.visualstudio.code \
+  com.getpostman.Postman \
+  io.dbeaver.DBeaverCommunity \
+  com.obsproject.Studio \
+  org.flameshot.Flameshot \
+  com.github.tchx84.Flatseal \
+  org.gnome.Boxes \
+  md.obsidian.Obsidian \
+  me.timschneeberger.jdsp4linux \
+  org.videolan.VLC \
+  org.chromium.Chromium \
+  com.google.Chrome \
+  org.gnome.DejaDup
+  ```
+
 ## Preparando sistema para jogos:
 
 - Instale os pacotes flatpak necessários para a Steam e Heroic Games Launcher:

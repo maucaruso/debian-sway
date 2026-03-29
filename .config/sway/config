@@ -76,7 +76,7 @@ default_floating_border pixel 2
 #
 # output * bg #3c3836 solid_color
 # gaps outer 2
-# smart_borders on
+# smart_borders off
 # smart_gaps inverse_outer
 
 #
@@ -88,7 +88,7 @@ default_floating_border pixel 2
 #}
 
 smart_borders on
-gaps inner 6
+gaps inner 4
 
 ### Theming
 #
