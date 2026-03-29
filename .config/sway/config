@@ -59,7 +59,7 @@ output * background ~/.config/sway/wallpapers/1.png fill
 #
 # Example configuration:
 #
-input "2:14:SynPS/2_Synaptics_TouchPad" {
+input "2:7:SynPS/2_Synaptics_TouchPad" {
        dwt enabled
        tap enabled
        natural_scroll enabled
@@ -87,7 +87,7 @@ default_floating_border pixel 2
 #  bg ~/.config/wallpaper/1.png fill
 #}
 
-smart_borders on
+smart_borders off
 gaps inner 4
 
 ### Theming

@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/window", "sway/mode"], 
-  "modules-center": ["cpu", "memory"],
+  "modules-center": ["cpu", "custom/gpu-usage", "memory"],
   "modules-right": ["pulseaudio", "network", "bluetooth", "clock", "battery", "custom/logout"],
 
   "clock": {
@@ -10,11 +10,19 @@
     "on-click": "gnome-calendar"
   },
   "cpu": {
-    "format": " {usage}%"
+    "format": " {usage}% {avg_frequency}GHz",
+    "interval": 1
+  },
+  "custom/gpu-usage": {
+    "exec": "cat /sys/class/hwmon/hwmon3/device/gpu_busy_percent",
+    "format": "󰍛 {}%",
+    "return-type": "",
+    "interval": 1
   },
   "memory": {
     "format": " {used:0.1f}G/{total:0.1f}G",
-    "on-click": "kitty -e htop"
+    "on-click": "kitty -e htop",
+    "interval": 3
   },
   "battery": {
     "format": "{capacity}% {icon}",

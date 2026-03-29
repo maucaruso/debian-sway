@@ -193,7 +193,24 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   org.gnome.DejaDup
   ```
   
-- Instale também Docker, Node e PHP
+- Adicione o alias code no bash:
+  ```bash
+  nano ~/.bashrc
+  
+  # Adicione a linha abaixo
+  alias code="flatpak run com.visualstudio.code"
+  
+  source ~/.bashrc
+  ```
+  
+- Instale o (spotify_player)[https://github.com/aome510/spotify-player]
+  ```bash
+  sudo apt install curl
+	sudo apt install libssl-dev libasound2-dev libdbus-1-dev
+	cargo install spotify_player --features pixelate
+  ```
+  
+- Instale também Docker, NVM e PHP
 
 ## Preparando sistema para jogos:
 
@@ -204,6 +221,11 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   io.github.radiolamp.mangojuice org.vinegarhq.Sober
   ```
   - Se for necessário, utilizando o FlatSeal libere as permissões do pacote flatpak do Steam para acessar outras unidades de disco.
+
+- Instale o seguinte pacote para que a Steam possa detectar dispositivos como controles:
+  ```bash
+  sudo apt install steam-devices  
+  ```
 
 ## Referências:
 
@@ -220,3 +242,7 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
 [Sway Rice](https://github.com/ziap/dotfiles)
 
 [Fix Flameshot Issues](https://bbs.archlinux.org/viewtopic.php?id=284847)
+
+[Nerf Fonts](https://www.nerdfonts.com/cheat-sheet)
+
+[Monitorar uso de GPU](https://www.reddit.com/r/swaywm/comments/ncjpfz/how_to_add_gpu_usage_to_waybar/)
