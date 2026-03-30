@@ -71,7 +71,7 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   sudo apt install sway swaybg swaylock swayidle \
   waybar wlogout libwayland-dev wofi mako-notifier \
   brightnessctl pavucontrol blueman xdg-desktop-portal-wlr mate-polkit \
-  network-manager-gnome fonts-font-awesome kitty git
+  grim slurp network-manager-gnome fonts-font-awesome kitty git
   ```
   
 - Clone este repositório e mova os arquivos de configuração:
