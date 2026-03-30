@@ -235,3 +235,5 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
 [Nerf Fonts](https://www.nerdfonts.com/cheat-sheet)
 
 [Monitorar uso de GPU](https://www.reddit.com/r/swaywm/comments/ncjpfz/how_to_add_gpu_usage_to_waybar/)
+
+[Como instalar Debian 12 com BTRFS corretamente para usar o Timeshift](https://www.youtube.com/watch?v=WUI3PqSoM80)
