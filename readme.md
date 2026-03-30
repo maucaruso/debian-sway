@@ -178,7 +178,6 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
 - O comando abaixo instala apps úteis para o meu fluxo de trabalho e uso pessoal:
   ```bash
   flatpak install flathub \
-  com.visualstudio.code \
   com.getpostman.Postman \
   io.dbeaver.DBeaverCommunity \
   com.obsproject.Studio \
@@ -193,16 +192,6 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   org.gnome.DejaDup
   ```
   
-- Adicione o alias code no bash:
-  ```bash
-  nano ~/.bashrc
-  
-  # Adicione a linha abaixo
-  alias code="flatpak run com.visualstudio.code"
-  
-  source ~/.bashrc
-  ```
-  
 - Instale o (spotify_player)[https://github.com/aome510/spotify-player]
   ```bash
   sudo apt install curl
@@ -210,7 +199,7 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
 	cargo install spotify_player --features pixelate
   ```
   
-- Instale também Docker, NVM e PHP
+- Instale também Docker, NVM e PHP e VS Code (pacote .deb pois versão flatpak tem muitos problemas)
 
 ## Preparando sistema para jogos:
 
