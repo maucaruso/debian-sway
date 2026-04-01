@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/window", "sway/mode"], 
   "modules-center": ["cpu", "custom/gpu-usage", "memory"],
-  "modules-right": ["tray", "pulseaudio", "network", "bluetooth", "clock", "battery", "custom/logout"],
+  "modules-right": ["tray", "pulseaudio", "network", "bluetooth", "clock", "battery", "custom/tlp", "custom/logout"],
 
   "clock": {
     "format": " {:%a %d %b %H:%M}",
@@ -27,6 +27,13 @@
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""],
+    "on-click": "flatpak run com.github.d4nj1.tlpui"
+  },
+  "custom/tlp": {
+    "exec": "tlp-stat -m | cut -c1-3 | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}'",
+    "interval": 5,
+    "format": "{}",
+    "tooltip": false,
     "on-click": "flatpak run com.github.d4nj1.tlpui"
   },
   "network": {

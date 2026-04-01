@@ -125,6 +125,12 @@ widget > * {
   border-color: #d3869b;
 }
 
+#custom-tlp {
+  background: #d65d0e;
+  color: #fbf1c7;
+  border-color: #fe8019;
+}
+
 #battery.charging {
   background: #98971a;
   color: #282828;
