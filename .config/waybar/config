@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/window", "sway/mode"], 
-  "modules-center": ["cpu", "custom/gpu-usage", "memory"],
+  "modules-center": ["temperature", "cpu", "custom/gpu-usage", "memory"],
   "modules-right": ["tray", "pulseaudio", "network", "bluetooth", "clock", "battery", "custom/tlp", "custom/logout"],
 
   "clock": {
@@ -13,14 +13,26 @@
     "format": " {usage}% {avg_frequency}GHz",
     "interval": 1
   },
+  "temperature": {
+    "thermal-zone": 0,
+    "format": " {temperatureC}°C",
+    "critical-threshold": 85,
+    "format-critical": " {temperatureC}°C",
+    "interval": 1
+  },
   "custom/gpu-usage": {
     "exec": "cat /sys/class/hwmon/hwmon3/device/gpu_busy_percent",
-    "format": "󰍛 {}%",
+    "format": "󰾆 {}%",
     "return-type": "",
     "interval": 1
   },
+  "custom/gpu-vram": {
+    "exec": "bash -c 'used=$(cat /sys/class/drm/card0/device/mem_info_vram_used); total=$(cat /sys/class/drm/card0/device/mem_info_vram_total); printf \"%.1f/%.1fG\" $(echo \"$used/1073741824\" | bc -l) $(echo \"$total/1073741824\" | bc -l)'",
+    "format": "󰾆 {}",
+    "interval": 1
+  },
   "memory": {
-    "format": " {used:0.1f}G/{total:0.1f}G",
+    "format": " {used:0.1f}G",
     "on-click": "kitty -e htop",
     "interval": 3
   },
