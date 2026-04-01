@@ -139,7 +139,8 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
 
 - Vamos configurar o tlp para fazer o gerenciamento de energia
   ```bash
-  sudo apt install tlp tlp-rdw acpi-call-dkms
+  sudo apt install -t trixie-backports tlp tlp-rdw
+  sudo apt install acpi-call-dkms
   sudo systemctl enable tlp && sudo systemctl start tlp
   flatpak install flathub com.github.d4nj1.tlpui
   ```
