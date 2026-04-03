@@ -152,7 +152,7 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   
 - Instale alguns programas úteis (opcionais)
   ```bash
-  sudo apt install htop fastfetch wdisplays
+  sudo apt install htop fastfetch wdisplays mesa-utils vulkan-tools
   ```
 
 - Reinicie o sistema
@@ -208,7 +208,8 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   ```bash
   flatpak install com.valvesoftware.Steam com.valvesoftware.Steam.Utility.vkBasalt \
   com.heroicgameslauncher.hgl com.github.Matoking.protontricks com.github.tchx84.Flatseal \
-  io.github.radiolamp.mangojuice org.vinegarhq.Sober
+  io.github.radiolamp.mangojuice org.vinegarhq.Sober \
+  org.freedesktop.Platform.VulkanLayer.MangoHud
   ```
   - Se for necessário, utilizando o FlatSeal libere as permissões do pacote flatpak do Steam para acessar outras unidades de disco.
 
