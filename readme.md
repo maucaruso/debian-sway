@@ -189,7 +189,6 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   me.timschneeberger.jdsp4linux \
   org.videolan.VLC \
   org.chromium.Chromium \
-  com.google.Chrome \
   org.gnome.DejaDup
   ```
   

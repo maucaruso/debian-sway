@@ -269,6 +269,7 @@ bindsym $mod+alt+r mode "resize"
         xkb_model thinkpad60
         xkb_layout br
         xkb_variant abnt2
+        xkb_numlock enabled
     }
 
 
