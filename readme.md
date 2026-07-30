@@ -188,7 +188,6 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   md.obsidian.Obsidian \
   me.timschneeberger.jdsp4linux \
   org.videolan.VLC \
-  org.chromium.Chromium \
   org.gnome.DejaDup
   ```
   
@@ -197,6 +196,11 @@ Outra vantagem dessa estrutura é, caso algum programa ou tarefa não esteja mui
   sudo apt install curl
 	sudo apt install libssl-dev libasound2-dev libdbus-1-dev
 	cargo install spotify_player --features pixelate
+  ```
+  
+- Instale o chromium, importante não ser flatpak pois ele é utilizado por ferramentas de automação como playwright
+  ```
+  sudo apt install chromium
   ```
   
 - Instale também Docker, NVM e PHP e VS Code (pacote .deb pois versão flatpak tem muitos problemas)
